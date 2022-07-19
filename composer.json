@@ -1,0 +1,30 @@
+{
+    "name": "sumaerjolly/oauth2-notion",
+    "description": "Notion Oauth 2.0 Client Provider for the PHP league OAuth2 Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sumaer Jolly",
+            "email": "sumaerjolly@gmail.com"
+        }
+    ],
+    "require": {
+      "php": ">=5.5.0",
+      "league/oauth2-client": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "~0.9",
+        "squizlabs/php_codesniffer": "~2.0"
+    },
+    "autoload": {
+		"psr-4": {
+			"SumaerJolly\\OAuth2\\Client\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"SumaerJolly\\OAuth2\\Client\\Test\\": "tests/src/"
+		}
+	}
+}
