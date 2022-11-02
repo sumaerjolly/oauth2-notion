@@ -23,9 +23,14 @@ class Notion extends AbstractProvider
    *     `grantFactory`, `requestFactory`, `httpClient`, and `randomFactory`.
    *     Individual providers may introduce more collaborators, as needed.
    */
-  public function __construct(array $options = [], array $collaborators = [])
+  public function __construct(string $clientId, string $clientSecret, string $redirectUri = '', array $collaborators = [])
   {
-    parent::__construct($options, $collaborators);
+    parent::__construct([
+      'clientId'     => $clientId,
+      'clientSecret' => $clientSecret,
+      'redirectUri'  => $redirectUri,
+      'owner' => 'user'
+    ], $collaborators);
   }
 
   public function getBaseAuthorizationUrl()
